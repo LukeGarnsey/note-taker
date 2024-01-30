@@ -12,7 +12,8 @@ To deploy app locally,
 run 'node server' to start the server which should then be deployed at [localhost:3001](http://localhost:3000).
 
 ## Screenshots
-
+![alt text](./examples/notes.png)
+![alt text](./examples/type-note.png)
 
 ## Credits
 This app runs as a [Node](https://nodejs.org) server using [Express](https://www.npmjs.com/package/express)
