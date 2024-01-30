@@ -16,6 +16,6 @@ run 'node server' to start the server which should then be deployed at [localhos
 ![alt text](./examples/type-note.png)
 
 ## Credits
-This app runs as a [Node](https://nodejs.org) server   
+This is a [Node](https://nodejs.org) application   
 Uses [Express](https://www.npmjs.com/package/express)  
 App is deployed to [Heroku](heroku.com)
