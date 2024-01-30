@@ -85,12 +85,13 @@ const handleNoteSave = () => {
 
 // Delete the clicked note
 const handleNoteDelete = (e) => {
+  console.log("On click delete");
   // Prevents the click listener for the list from being called when the button inside of it is clicked
   e.stopPropagation();
 
   const note = e.target;
-  const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).id;
-  console.log(noteId);
+  const noteId = note.parentElement.getAttribute('data-id');
+
   if (activeNote.id === noteId) {
     activeNote = {};
   }
@@ -157,6 +158,7 @@ const renderNoteList = async (notes) => {
         'text-danger',
         'delete-note'
       );
+      console.log("delete SEtup");
       delBtnEl.addEventListener('click', handleNoteDelete);
 
       liEl.append(delBtnEl);
@@ -172,7 +174,7 @@ const renderNoteList = async (notes) => {
   jsonNotes.forEach((note) => {
     const li = createLi(note.title);
     li.dataset.note = JSON.stringify(note);
-
+    li.dataset.id = note.id;
     noteListItems.push(li);
   });
 
