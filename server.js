@@ -34,7 +34,7 @@ app.post("/api/notes", (req, res) =>{
         note.id = Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
         db.push(note);
         fs.writeFile("./db/db.json", `${JSON.stringify(db)}`).then(()=>{
-            return res.send("Saved: " + JSON.stringify(note));
+            return res.status(200).json(note);
         }).catch(err=>{
             return res.send(err);
         });
